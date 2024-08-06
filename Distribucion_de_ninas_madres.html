@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribución de Niñas Madres por Estado Civil</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>Distribución de Niñas Madres por Estado Civil</h2>
+    <div id="bar-chart"></div>
+
+    <script>
+        // Datos de ejemplo
+        var data = [{
+            x: ['Soltera', 'Casada', 'Divorciada', 'Viuda'],
+            y: [500, 150, 30, 20], // Números de ejemplo
+            type: 'bar',
+            marker: {
+                color: 'orange' // Color de las barras anaranjado
+            }
+        }];
+
+        var layout = {
+            title: 'Distribución de Niñas Madres por Estado Civil',
+            xaxis: {
+                title: 'Estado Civil'
+            },
+            yaxis: {
+                title: 'Número de Niñas Madres'
+            }
+        };
+
+        Plotly.newPlot('bar-chart', data, layout);
+    </script>
+</body>
+</html>
